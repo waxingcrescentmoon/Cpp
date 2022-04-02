@@ -5,15 +5,23 @@
 // it is wasted resources while the app is running. In addition,
 // files can become corrupted if left open.
 
+// When used with a stream of type ofstream, the member function "open"
+// will create an output file if it does not already exist.
+// If the output file does exist the member function "open" will 
+// discard the contents of the file so that the optput file is empty
+// after the call to open.
+
+
+
 #include <iostream>
 #include <fstream> //file stream
-
 using namespace std;
 
 int main()
 {
     // ifstream and ofstream must be declared if you want a stream
-    // to a file. Simlar to declaring avariable. 
+    // to a file. Simlar to declaring avariable. ifstream and ofstring
+    // are defined in <fstream>.
     ifstream inStream; 
     ofstream outStream; 
 
